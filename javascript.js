@@ -9,6 +9,11 @@ window.onload = function(){
     var buttonReset = document.getElementById("Reset")
     var buttonLap = document.getElementById("Lap")
     var interval;
+    var lap1 = document.getElementById("Lap1")
+    var lap2 = document.getElementById("Lap2")
+    var lap3 = document.getElementById("Lap3")
+    var lap4 = document.getElementById("Lap4")
+    var lap5 = document.getElementById("Lap5")
 
     buttonStart.onclick = function(){
         clearInterval(interval);
@@ -30,6 +35,12 @@ window.onload = function(){
     buttonLap.onclick = function(){
         
     }
+
+    function lap(){
+
+    }
+
+
 
     function startTimer(){
         tens++;
