@@ -9,15 +9,13 @@ window.onload = function(){
     var buttonReset = document.getElementById("Reset")
     var buttonLap = document.getElementById("Lap")
     var interval;
-    var lap1 = document.getElementById("Lap1")
-    var lap2 = document.getElementById("Lap2")
-    var lap3 = document.getElementById("Lap3")
-    var lap4 = document.getElementById("Lap4")
-    var lap5 = document.getElementById("Lap5")
+    var x = 0;
+    var lapcount = 0;
 
     buttonStart.onclick = function(){
         clearInterval(interval);
         interval=setInterval(startTimer, 10);
+        localStorage.clickcount = 0;
     }
 
     buttonStop.onclick = function(){
@@ -30,17 +28,42 @@ window.onload = function(){
         seconds = "00";
         sumTens.innerHTML = tens;
         sumSeconds.innerHTML = seconds;
+        document.getElementById("lapSeconds1").innerHTML = "00";
+        document.getElementById("lapTens1").innerHTML = "00";
+        document.getElementById("lapSeconds2").innerHTML = "00";
+        document.getElementById("lapTens2").innerHTML = "00";
+        document.getElementById("lapSeconds3").innerHTML = "00";
+        document.getElementById("lapTens3").innerHTML = "00";
+        document.getElementById("lapSeconds4").innerHTML = "00";
+        document.getElementById("lapTens4").innerHTML = "00";
+        document.getElementById("lapSeconds5").innerHTML = "00";
+        document.getElementById("lapTens5").innerHTML = "00";
+        lapcount = 0;
     }
 
     buttonLap.onclick = function(){
-        
+        lapcount++;
+        if (lapcount == 1){
+            document.getElementById("lapSeconds1").innerHTML = seconds;
+            document.getElementById("lapTens1").innerHTML = tens;  
+        }
+        if (lapcount == 2){
+            document.getElementById("lapSeconds2").innerHTML = seconds;
+            document.getElementById("lapTens2").innerHTML = tens;
+        }
+        if (lapcount == 3){
+            document.getElementById("lapSeconds3").innerHTML = seconds;
+            document.getElementById("lapTens3").innerHTML = tens;
+        }
+        if (lapcount == 4){
+            document.getElementById("lapSeconds4").innerHTML = seconds;
+            document.getElementById("lapTens4").innerHTML = tens;
+        }
+        if (lapcount == 5){
+            document.getElementById("lapSeconds5").innerHTML = seconds;
+            document.getElementById("lapTens5").innerHTML = tens;
+        }
     }
-
-    function lap(){
-
-    }
-
-
 
     function startTimer(){
         tens++;
