@@ -1,0 +1,16 @@
+body{
+    height: 150vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background: linear-gradient(135deg, #ff00d4, #00ddff);
+  }
+  .container{
+    max-width: 700px;
+    width: 100%;
+    background-color: rgb(202, 245, 236);
+    padding: 100px 30px;
+    border-radius: 5px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.15);
+  }
